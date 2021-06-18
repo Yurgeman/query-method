@@ -1,0 +1,38 @@
+.cdx-query-url {
+  display:               grid;
+  grid-template-areas: "method url";
+  grid-template-columns: auto 1fr;
+}
+
+.cdx-query-url [contentEditable=true][data-placeholder]:empty::before {
+  opacity: 1;
+  color:   rgb(150, 150, 150);
+}
+
+.cdx-query-url [contentEditable=true][data-placeholder]:empty:focus::before {
+  opacity: 0;
+}
+
+.cdx-query-url__url {
+  grid-area:                 url;
+  border-top-left-radius:    0;
+  border-bottom-left-radius: 0;
+  border-width:              0;
+  background-color:          rgb(50, 50, 50);
+  color:                     rgb(246, 246, 246);
+  text-transform:            lowercase;
+  font-size:                 1.1rem;
+}
+
+.cdx-query-url__method {
+  background-color:           rgb(43, 138, 255);
+  color:                      rgb(246, 246, 246);
+  min-width:                  70px;
+  width:                      auto;
+  grid-area:                  method;
+  border-width:               0;
+  border-top-right-radius:    0;
+  border-bottom-right-radius: 0;
+  text-transform:             uppercase;
+  font-size:                  1.1rem;
+}
