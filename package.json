@@ -1,6 +1,6 @@
 {
   "name": "query-url",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "keywords": [
     "codex editor",
     "tool",
@@ -9,16 +9,26 @@
     "editor.js",
     "editor"
   ],
+  "author": {
+    "name": "Yurgeman",
+    "url": "https://docsme.ru"
+  },
   "description": "query-url Tool for Editor.js",
   "license": "MIT",
   "repository": "https://github.com/yurgeman/query-url",
   "main": "./dist/bundle.js",
+  "exports": {
+    ".": {
+      "import": "./dist/bundle.js"
+    }
+  },
+  "packageName": "ui-lib",
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "build & publish": "yarn version --patch && rimraf dist && webpack --mode production  && npm publish",
     "build:dev": "webpack --mode development --watch"
-  },
-  "author": {
-    "name": "Yurgeman"
   },
   "devDependencies": {
     "@babel/core": "^7.14.6",
